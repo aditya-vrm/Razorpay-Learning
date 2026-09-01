@@ -1,9 +1,10 @@
 const expresss=require('express');
-const {createProduct}=require('../controller/product.controller');
+const {createProduct,getProduct}=require('../controller/product.controller');
 
 const Productroutes=expresss.Router();
 
-Productroutes.post('/products',createProduct);
+Productroutes.post('/products/add',createProduct);
+Productroutes.get('/products/get',getProduct);
 
 
 module.exports=Productroutes;
