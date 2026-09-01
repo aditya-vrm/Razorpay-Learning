@@ -22,8 +22,6 @@ async function createProduct(req,res){
     }
 async function getProduct(req,res){
 
-    const{image,title,description,price:{amount,currency}}=req.body;
-
     try{const product= await productModel.findOne({})
     return res.status(201).json({
         messsage:"Product Data Succesfullly fetched",
